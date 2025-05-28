@@ -21,6 +21,10 @@ Route::get('loginAdmin', [AuthController::class, 'showLoginForm'])->name('loginA
 Route::post('loginAdmin', [AuthController::class, 'login']);
 Route::post('logoutAdmin', [AuthController::class, 'logout'])->name('logoutAdmin');
 
+Route::get('/apiDocs', function () {
+    return view('apiDocs');
+});
+
 Route::get('/{vue_capture?}', function() {
     return view('index');
 })->where('vue_capture', '[\/\w\.-]*');
