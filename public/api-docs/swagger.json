@@ -11,8 +11,11 @@
     {
       "name": "User",
       "description": "All User Operations"
+    },
+    {
+      "name": "Category",
+      "description": "Category API"
     }
-
   ],
   "paths": {
     "/auth/login": {
@@ -45,7 +48,6 @@
             "required": true,
             "type": "string"
           }
-
         ],
         "responses": {
           "200": {
@@ -53,9 +55,69 @@
           }
         }
       }
+    },
+    "/getCategories": {
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "Get All Categories (with subcategories)",
+        "operationId": "getCategories",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Category data retrieved successfully",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Category"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/products-by-category/{slug}": {
+  "get": {
+    "tags": [
+      "Category"
+    ],
+    "summary": "Get products by category slug (including subcategories)",
+    "operationId": "getProductsByCategorySlug",
+    "produces": [
+      "application/json"
+    ],
+    "parameters": [
+      {
+        "name": "slug",
+        "in": "path",
+        "description": "Category slug",
+        "required": true,
+        "type": "string"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "List of products",
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        }
+      },
+      "404": {
+        "description": "Category not found"
+      }
     }
-
-
+  }
+}
 
   },
   "securityDefinitions": {
@@ -79,7 +141,67 @@
           "type": "string"
         }
       }
-    }
+    },
+    "Category": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "category_name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "parent_category_id": {
+          "type": "integer",
+          "nullable": true
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CategoryChild"
+          }
+        }
+      }
+    },
+    "CategoryChild": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "category_name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "parent_category_id": {
+          "type": "integer",
+          "nullable": true
+        }
+      }
+    },
+    "Product": {
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer" },
+    "product_name": { "type": "string" },
+    "slug": { "type": "string" },
+    "price": { "type": "number", "format": "float" },
+    "image": { "type": "string" },
+    "category_id": { "type": "integer" }
+  }
+}
+
   },
   "schemes": [
     "http",

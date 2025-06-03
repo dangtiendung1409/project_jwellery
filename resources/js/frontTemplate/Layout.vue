@@ -1,291 +1,53 @@
 <template>
-       <!-- preloader  -->
-        <div id="preloader">
-            <div id="ctn-preloader" class="ctn-preloader">
-                <div class="animation-preloader">
-                    <div class="spinner"></div>
-                </div>
-                <div class="loader">
-                    <div class="row">
-                        <div class="col-3 loader-section section-left">
-                            <div class="bg"></div>
-                        </div>
-                        <div class="col-3 loader-section section-left">
-                            <div class="bg"></div>
-                        </div>
-                        <div class="col-3 loader-section section-right">
-                            <div class="bg"></div>
-                        </div>
-                        <div class="col-3 loader-section section-right">
-                            <div class="bg"></div>
-                        </div>
+    <!-- preloader  -->
+    <!-- <div id="preloader">
+        <div id="ctn-preloader" class="ctn-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- preloader end -->
+    </div> -->
+    <!-- preloader end -->
 
-		<!-- Scroll-top -->
-        <button class="scroll-top scroll-to-target" data-target="html">
-            <i class="fas fa-angle-up"></i>
-        </button>
-        <!-- Scroll-top-end-->
+    <!-- Scroll-top -->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <i class="fas fa-angle-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
 
-      <!-- header-area -->
-    <header>
-            <div class="header-top-wrap">
-                <div class="container custom-container">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-xl-3 col-lg-4 d-none d-lg-block">
-                            <div class="logo">
-                                <a href="index.html"><img src="/front_assets/img/logo/logo.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-5 col-md-6">
-                            <div class="header-top-offer">
-                                <p>SUMMER SALE UP TO <span>70% OFF.</span> SHOP NOW</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="header-top-action">
-                                <ul>
-                                    <li class="sign-in"><a href="#">Sign In</a></li>
-                                    <li class="wish-list"><a href="#"><i class="flaticon-heart-shape-outline"></i></a></li>
-                                    <li class="header-shop-cart"><a href="cart.html"><i class="flaticon-shopping-bag"></i><span>0</span></a>
-                                        <ul class="minicart">
-                                            <li class="d-flex align-items-start">
-                                                <div class="cart-img">
-                                                    <a href="#"><img src="img/product/cart_p01.jpg" alt=""></a>
-                                                </div>
-                                                <div class="cart-content">
-                                                    <h4><a href="#">Exclusive Winter Jackets</a></h4>
-                                                    <div class="cart-price">
-                                                        <span class="new">$229.9</span>
-                                                        <span><del>$229.9</del></span>
-                                                    </div>
-                                                </div>
-                                                <div class="del-icon">
-                                                    <a href="#"><i class="far fa-trash-alt"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="d-flex align-items-start">
-                                                <div class="cart-img">
-                                                    <a href="#"><img src="img/product/cart_p02.jpg" alt=""></a>
-                                                </div>
-                                                <div class="cart-content">
-                                                    <h4><a href="#">Winter Jackets For Women</a></h4>
-                                                    <div class="cart-price">
-                                                        <span class="new">$229.9</span>
-                                                        <span><del>$229.9</del></span>
-                                                    </div>
-                                                </div>
-                                                <div class="del-icon">
-                                                    <a href="#"><i class="far fa-trash-alt"></i></a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="total-price">
-                                                    <span class="f-left">Total:</span>
-                                                    <span class="f-right">$239.9</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkout-link">
-                                                    <a href="#">Shopping Cart</a>
-                                                    <a class="black-color" href="#">Checkout</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="sticky-header" class="main-header menu-area black-bg">
-                <div class="container custom-container">
+    <!-- header-area -->
+    <header class="header-style-five">
+            <div id="sticky-header" class="main-header menu-area">
+                <div class="container custom-container-two">
                     <div class="row">
                         <div class="col-12">
                             <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
                             <div class="menu-wrap">
                                 <nav class="menu-nav show">
                                     <div class="logo d-block d-lg-none">
-                                        <a href="index.html" class="main-logo"><img src="img/logo/w_logo.png" alt="Logo"></a>
-                                        <a href="index.html" class="sticky-logo"><img src="img/logo/logo.png" alt="Logo"></a>
-                                    </div>
-                                    <div class="header-category d-none d-lg-block">
-                                        <a href="#" class="cat-toggle"><i class="fas fa-bars"></i>ALL DEPARTMENT</a>
-                                        <ul class="category-menu">
-                                            <li class="has-dropdown"><a href="#">Accessories & Parts</a>
-                                                <ul class="cat-mega-menu">
-                                                    <li>
-                                                        <ul>
-                                                            <li class="dropdown-title">Accessories & Parts</li>
-                                                            <li><a href="#">Cables & Adapters</a></li>
-                                                            <li><a href="#">Batteries</a></li>
-                                                            <li><a href="#">Chargers</a></li>
-                                                            <li><a href="#">Bags & Cases</a></li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li class="dropdown-title">Electronic Cigarettes</li>
-                                                            <li><a href="#">Audio & Video</a></li>
-                                                            <li><a href="#">Televisions</a></li>
-                                                            <li><a href="#">TV Receivers</a></li>
-                                                            <li><a href="#">Projectors</a></li>
-                                                            <li><a href="#">Audio Amplifier Boards</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <ul>
-                                                            <li class="dropdown-title">Smart Electronics</li>
-                                                            <li><a href="#">Cables & Adapters</a></li>
-                                                            <li><a href="#">Batteries</a></li>
-                                                            <li><a href="#">Chargers</a></li>
-                                                            <li><a href="#">Bags & Cases</a></li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li class="dropdown-title">Portable Audio & Video</li>
-                                                            <li><a href="#">Audio & Video</a></li>
-                                                            <li><a href="#">Televisions</a></li>
-                                                            <li><a href="#">TV Receivers</a></li>
-                                                            <li><a href="#">Projectors</a></li>
-                                                            <li><a href="#">Audio Amplifier Boards</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <ul>
-                                                            <li class="dropdown-title">Accessories & Parts</li>
-                                                            <li><a href="#">Cables & Adapters</a></li>
-                                                            <li><a href="#">Batteries</a></li>
-                                                            <li><a href="#">Chargers</a></li>
-                                                            <li><a href="#">Bags & Cases</a></li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li class="dropdown-title">Audio & Video</li>
-                                                            <li class="cat-mega-menu-banner"><a href="#"><img src="img/images/megamenu_banner.jpg" alt=""></a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="has-dropdown"><a href="#">Cables & Adapters</a>
-                                                <ul class="cat-mega-menu">
-                                                    <li>
-                                                        <ul>
-                                                            <li class="dropdown-title">Accessories & Parts</li>
-                                                            <li><a href="#">Cables & Adapters</a></li>
-                                                            <li><a href="#">Batteries</a></li>
-                                                            <li><a href="#">Chargers</a></li>
-                                                            <li><a href="#">Bags & Cases</a></li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li class="dropdown-title">Electronic Cigarettes</li>
-                                                            <li><a href="#">Audio & Video</a></li>
-                                                            <li><a href="#">Televisions</a></li>
-                                                            <li><a href="#">TV Receivers</a></li>
-                                                            <li><a href="#">Projectors</a></li>
-                                                            <li><a href="#">Audio Amplifier Boards</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <ul>
-                                                            <li class="dropdown-title">Smart Electronics</li>
-                                                            <li><a href="#">Cables & Adapters</a></li>
-                                                            <li><a href="#">Batteries</a></li>
-                                                            <li><a href="#">Chargers</a></li>
-                                                            <li><a href="#">Bags & Cases</a></li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li class="dropdown-title">Portable Audio & Video</li>
-                                                            <li><a href="#">Audio & Video</a></li>
-                                                            <li><a href="#">Televisions</a></li>
-                                                            <li><a href="#">TV Receivers</a></li>
-                                                            <li><a href="#">Projectors</a></li>
-                                                            <li><a href="#">Audio Amplifier Boards</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <ul>
-                                                            <li class="dropdown-title">Accessories & Parts</li>
-                                                            <li><a href="#">Cables & Adapters</a></li>
-                                                            <li><a href="#">Batteries</a></li>
-                                                            <li><a href="#">Chargers</a></li>
-                                                            <li><a href="#">Bags & Cases</a></li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li class="dropdown-title">Audio & Video</li>
-                                                            <li class="cat-mega-menu-banner"><a href="#"><img src="img/images/megamenu_banner.jpg" alt=""></a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Batteries</a></li>
-                                            <li><a href="#">Chargers</a></li>
-                                            <li><a href="#">Bags & Cases</a></li>
-                                            <li><a href="#">Electronic Cigarettes</a></li>
-                                            <li><a href="#">Audio & Video</a></li>
-                                            <li><a href="#">Televisions</a></li>
-                                            <li><a href="#">TV Receivers</a></li>
-                                            <li class="has-dropdown"><a href="#">Projectors</a>
-                                                <ul class="cat-mega-menu">
-                                                    <li>
-                                                        <ul>
-                                                            <li class="dropdown-title">Accessories & Parts</li>
-                                                            <li><a href="#">Cables & Adapters</a></li>
-                                                            <li><a href="#">Batteries</a></li>
-                                                            <li><a href="#">Chargers</a></li>
-                                                            <li><a href="#">Bags & Cases</a></li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li class="dropdown-title">Electronic Cigarettes</li>
-                                                            <li><a href="#">Audio & Video</a></li>
-                                                            <li><a href="#">Televisions</a></li>
-                                                            <li><a href="#">TV Receivers</a></li>
-                                                            <li><a href="#">Projectors</a></li>
-                                                            <li><a href="#">Audio Amplifier Boards</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <ul>
-                                                            <li class="dropdown-title">Smart Electronics</li>
-                                                            <li><a href="#">Cables & Adapters</a></li>
-                                                            <li><a href="#">Batteries</a></li>
-                                                            <li><a href="#">Chargers</a></li>
-                                                            <li><a href="#">Bags & Cases</a></li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li class="dropdown-title">Portable Audio & Video</li>
-                                                            <li><a href="#">Audio & Video</a></li>
-                                                            <li><a href="#">Televisions</a></li>
-                                                            <li><a href="#">TV Receivers</a></li>
-                                                            <li><a href="#">Projectors</a></li>
-                                                            <li><a href="#">Audio Amplifier Boards</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <ul>
-                                                            <li class="dropdown-title">Accessories & Parts</li>
-                                                            <li><a href="#">Cables & Adapters</a></li>
-                                                            <li><a href="#">Batteries</a></li>
-                                                            <li><a href="#">Chargers</a></li>
-                                                            <li><a href="#">Bags & Cases</a></li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li class="dropdown-title">Audio & Video</li>
-                                                            <li class="cat-mega-menu-banner"><a href="#"><img src="img/images/megamenu_banner.jpg" alt=""></a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Audio Amplifier Boards</a></li>
-                                            <li><a href="#">TV Sticks</a></li>
-                                        </ul>
+                                        <a href="index.html"><img src="/front_assets/img/logo/logo.png" alt="Logo"></a>
                                     </div>
                                     <div class="navbar-wrap main-menu d-none d-lg-flex">
-                                        <ul class="navigation">
-                                            <li class="active menu-item-has-children has--mega--menu"><a href="#">Home</a>
+                                        <ul class="navigation left">
+                                            <li class="active menu-item-has-children has--mega--menu"><router-link :to="{ name: 'Index' }">Home</router-link>
                                                 <ul class="mega--menu--wrap scroll">
-                                                    <li class="active">
+                                                    <li>
                                                         <a href="index.html">
                                                             <span class="img"><img src="img/home-demo/home_01.jpg" alt=""></span>
                                                             <span class="text">Home style One</span>
@@ -309,7 +71,7 @@
                                                             <span class="text">Home style four</span>
                                                         </a>
                                                     </li>
-                                                    <li>
+                                                    <li class="active">
                                                         <a href="index-5.html">
                                                             <span class="img"><img src="img/home-demo/home_05.jpg" alt=""></span>
                                                             <span class="text">Home style five</span>
@@ -341,49 +103,45 @@
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li class="has--mega--menu"><a href="#">Shop</a>
-                                                <ul class="mega-menu">
-                                                    <li class="mega-menu-wrap">
-                                                        <ul class="mega-menu-col">
-                                                            <li class="mega-title"><a href="shop.html">SHOP PAGES</a></li>
-                                                            <li><a href="shop-sidebar.html">Right Sidebar</a></li>
-                                                            <li><a href="shop-sidebar.html">Left Sidebar</a></li>
-                                                            <li><a href="shop.html">Hidden sidebar</a></li>
-                                                            <li><a href="shop.html">Filters area</a></li>
-                                                            <li><a href="shop-details.html">Shop Details</a></li>
-                                                            <li><a href="cart.html">Cart Page</a></li>
-                                                            <li><a href="checkout.html">Checkout Page</a></li>
-                                                        </ul>
-                                                        <ul class="mega-menu-col">
-                                                            <li class="mega-title"><a href="#">FEATURES</a></li>
-                                                            <li><a href="shop-sidebar.html">Variable Product</a></li>
-                                                            <li><a href="shop-sidebar.html">External Product</a></li>
-                                                            <li><a href="shop-sidebar.html">Other Shop Pages</a></li>
-                                                            <li><a href="shop-sidebar.html">Categories</a></li>
-                                                            <li><a href="shop-sidebar.html">Collection</a></li>
-                                                            <li><a href="shop-sidebar.html">LookBook</a></li>
-                                                            <li><a href="cart.html">Shopping Cart</a></li>
-                                                        </ul>
-                                                        <ul class="mega-menu-col sub-cat-post">
-                                                            <li>
-                                                                <a href="shop-sidebar.html">
-                                                                    <img src="img/product/sub_menu_img01.jpg" alt="">
-                                                                    <span class="btn">Man Shop</span>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="mega-menu-col sub-cat-post">
-                                                            <li>
-                                                                <a href="shop-sidebar.html">
-                                                                    <img src="img/product/sub_menu_img02.jpg" alt="">
-                                                                    <span class="btn">Women’s Shop</span>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
+                                            <li class="has--mega--menu">
+                                            <a href="#">Shop</a>
+                                            <ul class="mega-menu">
+                                                <li class="mega-menu-wrap" v-if="categories.length" style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 32px;">
+                                                    <ul
+                                                        class="mega-menu-col"
+                                                        v-for="(parentCat, index) in categories"
+                                                        :key="parentCat.id"
+                                                        style="display: flex; flex-direction: column; align-items: center; min-width: 220px; margin: 0; padding: 0;"
+                                                    >
+                                                        <li class="mega-title" style="font-weight: bold; font-size: 20px; margin-bottom: 9px; text-align: center; border-bottom: 2px solid #222; padding-bottom: 6px; width: 100%; background: none;">
+                                                            <router-link :to="{ name: 'Category', params: { slug: parentCat.slug } }">
+                                                                {{ parentCat.category_name }}
+                                                            </router-link>
+
+                                                        </li>
+                                                        <li v-for="child in parentCat.children" :key="child.id" style="margin-bottom: 6px; text-align: center; width: 100%;">
+                                                            <router-link :to="{ name: 'Category' , params: {slug: child.slug } }" >
+                                                                {{ child.category_name }}
+                                                            </router-link>
+                                                        </li>
+                                                        <!-- Ảnh đại diện category cha nằm ngay dưới danh mục, thẳng hàng với cột -->
+                                                        <li class="cat-image" style="text-align:center; margin-top:24px; width: 100%;">
+                                                            <router-link :to="{ name: 'Category', params: { slug: parentCat.slug } }">
+                                                                <img :src="parentCat.image.startsWith('/') ? parentCat.image : '/' + parentCat.image" alt="" style="width: 200px; height: 150px; object-fit: cover; display:block; margin:0 auto; border-radius:14px; box-shadow:0 2px 14px rgba(0,0,0,0.13);" />
+                                                            </router-link>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                            <li><a href="shop.html">Sale</a></li>
                                             <li><a href="about-us.html">About Us</a></li>
+                                        </ul>
+                                        <div class="logo">
+                                            <a href="index.html"><img src="/front_assets/img/logo/logo.png" alt="Logo"></a>
+                                        </div>
+                                        <ul class="navigation right">
                                             <li class="menu-item-has-children"><a href="#">blog</a>
                                                 <ul class="submenu">
                                                     <li><a href="blog.html">Our Blog</a></li>
@@ -395,9 +153,56 @@
                                     </div>
                                     <div class="header-action d-none d-md-block">
                                         <ul>
-                                            <li class="shipping-offer">Free Shipping on Orders <span>$39+</span></li>
-                                            <li class="header-search"><a href="#" data-toggle="modal" data-target="#search-modal"><i class="flaticon-search-interface-symbol"></i></a></li>
-                                            <li class="sidebar-toggle-btn"><a href="#" class="navSidebar-button"><img src="img/icon/sidebar_toggle_icon.png" alt=""></a></li>
+                                            <li class="header-search"><a href="#" data-toggle="modal" data-target="#search-modal"><i class="flaticon-search"></i></a></li>
+                                            <li class="header-profile"><a href="#"><i class="flaticon-user"></i></a></li>
+                                            <li class="header-wishlist"><a href="#"><i class="flaticon-heart-shape-outline"></i></a></li>
+                                            <li class="header-shop-cart"><a href="#"><i class="flaticon-shopping-bag"></i><span>0</span></a>
+                                                <ul class="minicart">
+                                                    <li class="d-flex align-items-start">
+                                                        <div class="cart-img">
+                                                            <a href="#"><img src="img/product/cart_p01.jpg" alt=""></a>
+                                                        </div>
+                                                        <div class="cart-content">
+                                                            <h4><a href="#">Exclusive Winter Jackets</a></h4>
+                                                            <div class="cart-price">
+                                                                <span class="new">$229.9</span>
+                                                                <span><del>$229.9</del></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="del-icon">
+                                                            <a href="#"><i class="far fa-trash-alt"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-start">
+                                                        <div class="cart-img">
+                                                            <a href="#"><img src="img/product/cart_p02.jpg" alt=""></a>
+                                                        </div>
+                                                        <div class="cart-content">
+                                                            <h4><a href="#">Winter Jackets For Women</a></h4>
+                                                            <div class="cart-price">
+                                                                <span class="new">$229.9</span>
+                                                                <span><del>$229.9</del></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="del-icon">
+                                                            <a href="#"><i class="far fa-trash-alt"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="total-price">
+                                                            <span class="f-left">Total:</span>
+                                                            <span class="f-right">$239.9</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkout-link">
+                                                            <a href="#">Shopping Cart</a>
+                                                            <a class="black-color" href="#">Checkout</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="sidebar-toggle-btn"><a href="#" class="navSidebar-button"><i class="flaticon-menu-button-of-three-horizontal-lines"></i></a></li>
                                         </ul>
                                     </div>
                                 </nav>
@@ -412,11 +217,11 @@
                                         <ul class="navigation">
                                             <li class="active menu-item-has-children"><a href="#">Home</a>
                                                 <ul class="submenu">
-                                                    <li class="active"><a href="index.html">Home One</a></li>
+                                                    <li><a href="index.html">Home One</a></li>
                                                     <li><a href="index-2.html">Home Two</a></li>
                                                     <li><a href="index-3.html">Home Three</a></li>
                                                     <li><a href="index-4.html">Home Four</a></li>
-                                                    <li><a href="index-5.html">Home Five</a></li>
+                                                    <li class="active"><a href="index-5.html">Home Five</a></li>
                                                     <li><a href="index-6.html">Home Six</a></li>
                                                     <li><a href="index-7.html">Home Seven</a></li>
                                                     <li><a href="index-8.html">Home Eight</a></li>
@@ -496,7 +301,8 @@
                                         <h4 class="title">CONTACT US</h4>
                                         <ul>
                                             <li><span class="flaticon-phone-call"></span><a href="tel:123456789">+9 325 444 0000</a></li>
-                                            <li><span class="flaticon-email"></span><a href="mailto:adara@info.com">adara@info.com</a></li>
+                                            <li><span class="flaticon-email"></span><a
+                                                    href="mailto:adara@info.com">adara@info.com</a></li>
                                             <li><span class="flaticon-place"></span>71 Park Lan Street 2355 NY</li>
                                         </ul>
                                     </div>
@@ -552,109 +358,156 @@
             </div>
             <!-- off-canvas-end -->
 
-    </header>
+        </header>
     <main>
         <slot name="content"></slot>
     </main>
     <footer class="dark-bg pt-55 pb-80">
-            <div class="container">
-                <div class="footer-top-wrap">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="img/logo/w_logo.png" alt=""></a>
-                            </div>
+        <div class="container">
+            <div class="footer-top-wrap">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer-logo">
+                            <a href="index.html"
+                                ><img src="img/logo/w_logo.png" alt=""
+                            /></a>
                         </div>
                     </div>
                 </div>
-                <div class="footer-middle-wrap">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="footer-link-wrap">
-                                <nav class="menu-links">
-                                    <ul>
-                                        <li><a href="about-us.html">About us</a></li>
-                                        <li><a href="shop-sidebar.html">Store</a></li>
-                                        <li><a href="#">Locations</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="contact.html">Support</a></li>
-                                        <li><a href="#">Policy</a></li>
-                                        <li><a href="#">Faqs</a></li>
-                                    </ul>
-                                </nav>
-                                <div class="footer-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-google"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="copyright-wrap">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="copyright-text">
-                                <p>&copy; 2021 <a href="index.html">adara</a>. All Rights Reserved | Ph (+09) 456 457869</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="pay-method-img">
-                                <img src="img/images/payment_method_img.png" alt="">
+            </div>
+            <div class="footer-middle-wrap">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer-link-wrap">
+                            <nav class="menu-links">
+                                <ul>
+                                    <li>
+                                        <a href="about-us.html">About us</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop-sidebar.html">Store</a>
+                                    </li>
+                                    <li><a href="#">Locations</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="contact.html">Support</a></li>
+                                    <li><a href="#">Policy</a></li>
+                                    <li><a href="#">Faqs</a></li>
+                                </ul>
+                            </nav>
+                            <div class="footer-social">
+                                <ul>
+                                    <li>
+                                        <a href="#"
+                                            ><i class="fab fa-facebook-f"></i
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            ><i class="fab fa-twitter"></i
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            ><i class="fab fa-youtube"></i
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            ><i class="fab fa-instagram"></i
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            ><i class="fab fa-linkedin-in"></i
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            ><i class="fab fa-google"></i
+                                        ></a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="copyright-wrap">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="copyright-text">
+                            <p>
+                                &copy; 2021 <a href="index.html">adara</a>. All
+                                Rights Reserved | Ph (+09) 456 457869
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="pay-method-img">
+                            <img
+                                src="img/images/payment_method_img.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
     <div id="scripts"></div>
 </template>
 <script>
-
+import axios from "axios";
+import getUrlList from "../provider.js";
 export default {
-    name: 'Layout',
+    name: "Layout",
     data() {
+        return {
+            categories: [],
+        };
     },
     async mounted() {
+        this.loadCategories();
         this.loadExternalScripts();
     },
     methods: {
+        async loadCategories() {
+            try {
+                const response = await axios.get(getUrlList().getCategories);
+                this.categories = response.data;
+            } catch (error) {
+                console.error("Lỗi khi lấy danh sách category:", error);
+            }
+        },
         loadExternalScripts() {
             const src = [
-                '/front_assets/js/vendor/jquery-3.5.0.min.js',
-                '/front_assets/js/popper.min.js',
-                '/front_assets/js/bootstrap.min.js',
-                '/front_assets/js/isotope.pkgd.min.js',
-                '/front_assets/js/imagesloaded.pkgd.min.js',
-                '/front_assets/js/jquery.magnific-popup.min.js',
-                '/front_assets/js/jquery.mCustomScrollbar.concat.min.js',
-                '/front_assets/js/bootstrap-datepicker.min.js',
-                '/front_assets/js/jquery.nice-select.min.js',
-                '/front_assets/js/jquery.countdown.min.js',
-                '/front_assets/js/swiper-bundle.min.js',
-                '/front_assets/js/jarallax.min.js',
-                '/front_assets/js/slick.min.js',
-                '/front_assets/js/wow.min.js',
-                '/front_assets/js/nav-tool.js',
-                '/front_assets/js/plugins.js',
-                '/front_assets/js/main.js',
+                "/front_assets/js/vendor/jquery-3.5.0.min.js",
+                "/front_assets/js/popper.min.js",
+                "/front_assets/js/bootstrap.min.js",
+                "/front_assets/js/isotope.pkgd.min.js",
+                "/front_assets/js/imagesloaded.pkgd.min.js",
+                "/front_assets/js/jquery.magnific-popup.min.js",
+                "/front_assets/js/jquery.mCustomScrollbar.concat.min.js",
+                "/front_assets/js/bootstrap-datepicker.min.js",
+                "/front_assets/js/jquery.nice-select.min.js",
+                "/front_assets/js/jquery.countdown.min.js",
+                "/front_assets/js/swiper-bundle.min.js",
+                "/front_assets/js/jarallax.min.js",
+                "/front_assets/js/slick.min.js",
+                "/front_assets/js/wow.min.js",
+                "/front_assets/js/nav-tool.js",
+                "/front_assets/js/plugins.js",
+                "/front_assets/js/main.js",
             ];
-            src.forEach(srcFile => {
-                const script = document.createElement('script');
+            src.forEach((srcFile) => {
+                const script = document.createElement("script");
                 script.src = srcFile;
                 script.async = false;
-                document.getElementById('scripts').appendChild(script);
+                document.getElementById("scripts").appendChild(script);
             });
         },
     },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
