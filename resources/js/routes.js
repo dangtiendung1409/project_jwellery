@@ -2,11 +2,13 @@ import { createWebHistory, createRouter } from 'vue-router';
 import Index from './frontTemplate/Index.vue';
 import Category from './frontTemplate/Category.vue';
 import DetailsProduct from './frontTemplate/DetailsProduct.vue'
+import Search from './frontTemplate/Search.vue';
 
 const routes = [
     { name: 'Index', path: '/', component: Index },
     { name: 'Category', path: '/category/:slug', component: Category },
     { name: 'DetailsProduct', path: '/product/:slug', component: DetailsProduct },
+    { name: 'Search', path: '/search', component: Search },
 ];
 
 // Tạo router

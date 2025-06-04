@@ -188,7 +188,42 @@
       }
     }
   }
+},
+"/search-products": {
+  "get": {
+    "tags": [
+      "Product"
+    ],
+    "summary": "Search products by keyword (matches name, code, and other fields)",
+    "operationId": "searchProducts",
+    "produces": [
+      "application/json"
+    ],
+    "parameters": [
+      {
+        "name": "keyword",
+        "in": "query",
+        "description": "Keyword to search across product_name, product_code, type, stone_type, color, material, gender, finish_quality",
+        "required": true,
+        "type": "string"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "List of matched products",
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        }
+      }
+    }
+  }
 }
+
+
+
 
 
 
