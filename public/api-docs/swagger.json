@@ -84,6 +84,7 @@
       }
     },
     "/products-by-category/{slug}": {
+
   "get": {
     "tags": [
       "Category"
@@ -117,7 +118,79 @@
       }
     }
   }
+  },
+  "/product-detail/{slug}": {
+  "get": {
+    "tags": [
+      "Product"
+    ],
+    "summary": "Get Product Detail by Slug",
+    "operationId": "getProductDetail",
+    "produces": [
+      "application/json"
+    ],
+    "parameters": [
+      {
+        "name": "slug",
+        "in": "path",
+        "required": true,
+        "type": "string",
+        "description": "Slug of the product to retrieve"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Product detail retrieved successfully",
+        "schema": {
+          "$ref": "#/definitions/Product"
+        }
+      },
+      "404": {
+        "description": "Product not found"
+      },
+      "500": {
+        "description": "Internal server error"
+      }
+    }
+  }
+},
+"/related-products/{slug}": {
+  "get": {
+    "tags": [
+      "Product"
+    ],
+    "summary": "Get up to 4 related products by product slug (same category)",
+    "operationId": "getRelatedProductsBySlug",
+    "produces": [
+      "application/json"
+    ],
+    "parameters": [
+      {
+        "name": "slug",
+        "in": "path",
+        "description": "Product slug to find related products",
+        "required": true,
+        "type": "string"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "List of related products",
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        }
+      },
+      "404": {
+        "description": "Product not found"
+      }
+    }
+  }
 }
+
+
 
   },
   "securityDefinitions": {
@@ -190,17 +263,43 @@
         }
       }
     },
-    "Product": {
+   "Product": {
   "type": "object",
   "properties": {
     "id": { "type": "integer" },
     "product_name": { "type": "string" },
     "slug": { "type": "string" },
     "price": { "type": "number", "format": "float" },
-    "image": { "type": "string" },
-    "category_id": { "type": "integer" }
+    "description": { "type": "string" },
+    "product_code": { "type": "string" },
+    "qty": { "type": "integer" },
+    "category_id": { "type": "integer" },
+    "type": { "type": "string" },
+    "stone_type": { "type": "string" },
+    "color": { "type": "string" },
+    "material": { "type": "string" },
+    "gender": { "type": "string" },
+    "finish_quality": { "type": "string" },
+    "images": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ProductImage"
+      }
+    },
+    "category": {
+      "$ref": "#/definitions/Category"
+    }
+  }
+},
+"ProductImage": {
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer" },
+    "product_id": { "type": "integer" },
+    "image_path": { "type": "string" }
   }
 }
+
 
   },
   "schemes": [

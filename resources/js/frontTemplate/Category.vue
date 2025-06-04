@@ -74,7 +74,7 @@
                                             <div v-if="product.discount" class="discount-tag">
                                                 - {{ product.discount }}%
                                             </div>
-                                            <a :href="`/shop-details/${product.slug}`">
+                                            <a :href="`/product/${product.slug}`">
                                                 <img :src="product.image.startsWith(
                                                     '/'
                                                 )
@@ -89,7 +89,7 @@
                                                         <a href="/cart"><i class="far fa-heart"></i></a>
                                                     </li>
                                                     <li>
-                                                        <a :href="`/shop-details/${product.slug}`"><i
+                                                        <a :href="`/product/${product.slug}`"><i
                                                                 class="far fa-eye"></i></a>
                                                     </li>
                                                 </ul>
