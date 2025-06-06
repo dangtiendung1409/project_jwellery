@@ -171,10 +171,23 @@
                                     <ul>
                                         <li class="header-search"><a href="#" data-toggle="modal"
                                                 data-target="#search-modal"><i class="flaticon-search"></i></a></li>
-                                        <li class="header-profile"><a href="#"><i class="flaticon-user"></i></a></li>
-                                        <li class="header-wishlist"><a href="#"><i
+                                        <li class="header-profile" v-if="isLoggedIn">
+                                            <a href="#" @click.prevent="toggleDropdown('profileDropdown')">
+                                                <i class="flaticon-user"></i>
+                                            </a>
+                                            <div id="profileDropdown" class="dropdown-content">
+                                                <router-link to="/my-profile"><i class="fa fa-user"></i> My
+                                                    Profile</router-link>
+                                                <router-link to="/settings"><i class="fa fa-cog"></i>
+                                                    Settings</router-link>
+                                                <a href="#" @click.prevent="handleLogout"><i
+                                                        class="fa fa-sign-out-alt"></i> Logout</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="header-wishlist" v-if="isLoggedIn"><a href="#"><i
                                                     class="flaticon-heart-shape-outline"></i></a></li>
-                                        <li class="header-shop-cart"><a href="#"><i
+                                        <li class="header-shop-cart" v-if="isLoggedIn"><a href="#"><i
                                                     class="flaticon-shopping-bag"></i><span>0</span></a>
                                             <ul class="minicart">
                                                 <li class="d-flex align-items-start">
@@ -221,6 +234,13 @@
                                                 </li>
                                             </ul>
                                         </li>
+                                        <li v-else class="header-auth">
+    <router-link to="/login" class="auth-link">Log in</router-link>
+    <span class="separator">|</span>
+    <router-link to="/register" class="auth-link">Sign up</router-link>
+</li>
+
+
                                         <li class="sidebar-toggle-btn"><a href="#" class="navSidebar-button"><i
                                                     class="flaticon-menu-button-of-three-horizontal-lines"></i></a></li>
                                     </ul>
@@ -466,19 +486,53 @@
 <script>
 import axios from "axios";
 import getUrlList from "../provider.js";
+import { useAuthStore } from '@/stores/authStore';
+import { mapState } from 'pinia';
 export default {
     name: "Layout",
     data() {
         return {
             categories: [],
             searchKeyword: '',
+            currentOpenDropdown: null,
         };
     },
+    computed: {
+        ...mapState(useAuthStore, ['isLoggedIn'])
+    },
     async mounted() {
+        const authStore = useAuthStore();
+        await authStore.checkLoginStatus();
         this.loadCategories();
         this.loadExternalScripts();
+        document.addEventListener("click", this.handleOutsideClick);
+    },
+    beforeUnmount() {
+        document.removeEventListener("click", this.handleOutsideClick);
     },
     methods: {
+        toggleDropdown(id) {
+            const dropdownElement = document.getElementById(id);
+            if (dropdownElement) {
+                dropdownElement.classList.toggle("show");
+                this.currentOpenDropdown = id;
+            }
+        },
+        handleOutsideClick(event) {
+            const dropdown = document.getElementById(this.currentOpenDropdown);
+            if (
+                dropdown &&
+                !dropdown.contains(event.target) &&
+                !event.target.closest('.header-profile')
+            ) {
+                dropdown.classList.remove("show");
+                this.currentOpenDropdown = null;
+            }
+        },
+        async handleLogout() {
+            const authStore = useAuthStore();
+            await authStore.handleLogout();
+        },
         async loadCategories() {
             try {
                 const response = await axios.get(getUrlList().getCategories);
@@ -526,4 +580,68 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.dropdown-content {
+    position: absolute;
+    right: -10px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    min-width: 180px;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    padding: 12px 0;
+}
+
+.dropdown-content.show {
+    display: flex;
+}
+
+.dropdown-content a,
+.dropdown-content .router-link-active {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.dropdown-content a i {
+    margin-right: 10px;
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+.header-auth {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* khoảng cách giữa các phần tử */
+    font-size: 14px;
+    color: #555; /* Màu chữ có thể tùy theme */
+}
+
+.auth-link {
+    color: #333; /* Màu chữ chính */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.auth-link:hover {
+    color: #007bff; /* Màu khi hover */
+}
+
+.separator {
+    color: #aaa; /* Màu cho dấu | */
+}
+
+
+</style>

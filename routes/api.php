@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\CategoryController;
 use App\Http\Controllers\Front\DetailsProductController;
 use App\Http\Controllers\Front\HomePageController;
+use App\Http\Controllers\Auth\AuthUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,12 @@ use App\Http\Controllers\Front\HomePageController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+// auth
+Route::post('/login', [AuthUserController::class, 'login']);
+Route::post('/register', [AuthUserController::class, 'register']);
+Route::post('/refresh-token', [AuthUserController::class, 'refreshToken']);
+Route::post('/logout', [AuthUserController::class, 'logout']);
+
 // home page
 Route::get('/getCategories', [CategoryController::class, 'getCategory']);
 Route::get('/search-products', [HomePageController::class, 'searchProduct']);

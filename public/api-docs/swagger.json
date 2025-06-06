@@ -18,44 +18,183 @@
     }
   ],
   "paths": {
-    "/auth/login": {
-      "post": {
-        "tags": [
-          "User"
-        ],
-        "summary": "User Login",
-        "operationId": "login",
-        "produces": [
-          "application/json"
-        ],
-        "security": [
-          {
-            "APIKeyHeader": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "email",
-            "in": "formData",
-            "description": "Enter Email",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "password",
-            "in": "formData",
-            "description": "password",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Data"
+   "/login": {
+  "post": {
+    "tags": [
+      "Auth"
+    ],
+    "summary": "Login and get JWT tokens",
+    "operationId": "loginUser",
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "parameters": [
+      {
+        "in": "body",
+        "name": "body",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "required": ["email", "password"],
+          "properties": {
+            "email": {
+              "type": "string",
+              "format": "email",
+              "example": "user@example.com"
+            },
+            "password": {
+              "type": "string",
+              "example": "secret"
+            }
           }
         }
       }
-    },
+    ],
+    "responses": {
+      "200": {
+        "description": "Login successful",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "message": { "type": "string", "example": "Login successful" },
+            "token": { "type": "string" },
+            "refresh_token": { "type": "string" },
+            "route": { "type": "string", "example": "http://yourapp.test/" }
+          }
+        }
+      },
+      "401": {
+        "description": "Wrong account or password",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "error": { "type": "string", "example": "Wrong account or password." }
+          }
+        }
+      },
+      "403": {
+        "description": "Account is locked",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "error": { "type": "string", "example": "Your account is locked." }
+          }
+        }
+      }
+    }
+  }
+},
+"/register": {
+  "post": {
+    "tags": [
+      "Auth"
+    ],
+    "summary": "Register a new user account",
+    "operationId": "registerUser",
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "parameters": [
+      {
+        "in": "body",
+        "name": "body",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "required": ["full_name", "email", "password", "password_confirmation"],
+          "properties": {
+            "full_name": {
+              "type": "string",
+              "example": "John Doe"
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "example": "john@example.com"
+            },
+            "password": {
+              "type": "string",
+              "example": "123456"
+            },
+            "password_confirmation": {
+              "type": "string",
+              "example": "123456"
+            }
+          }
+        }
+      }
+    ],
+    "responses": {
+      "201": {
+        "description": "Registration successful",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "Registration successful"
+            }
+          }
+        }
+      },
+      "422": {
+        "description": "Validation error",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "message": { "type": "string", "example": "The given data was invalid." },
+            "errors": {
+              "type": "object",
+              "example": {
+                "email": ["The email has already been taken."]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},
+"/logout": {
+          "post": {
+              "tags": [
+                  "Auth"
+              ],
+              "summary": "User Logout",
+              "operationId": "logoutUser",
+              "produces": [
+                  "application/json"
+              ],
+              "parameters": [
+                  {
+                      "name": "Authorization",
+                      "in": "header",
+                      "description": "Bearer token for authentication",
+                      "required": true,
+                      "type": "string"
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Logout successful"
+                  },
+                  "401": {
+                      "description": "Unauthorized"
+                  },
+                  "500": {
+                      "description": "Internal server error"
+                  }
+              }
+          }
+      },
+
+
     "/getCategories": {
       "get": {
         "tags": [

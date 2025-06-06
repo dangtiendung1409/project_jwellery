@@ -14,6 +14,13 @@ const baseUrl = 'http://127.0.0.1:8001/api';
           getProductDetailBySlug: (slug) => `${baseUrl}/product-detail/${slug}`,
           getRelatedProductsBySlug: (slug) => `${baseUrl}/related-products/${slug}`,
 
+          // auth user
+          login : `${baseUrl}/login`,
+          register : `${baseUrl}/register`,
+          logout : `${baseUrl}/logout`,
+          refreshToken: `${baseUrl}/refresh-token`,
+        //   getUser : `${baseUrl}/user`,
+
       }
 }
 export default getUrlList;
